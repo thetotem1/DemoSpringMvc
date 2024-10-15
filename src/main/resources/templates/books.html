@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li th:each="book : ${books}" >
+        <p th:text="${(book.name)}"></p>
+        <button>
+            <a th:href="@{/book/{isbn} (isbn=${book.isbn})}"> Détails </a>
+        </button>
+    </li>
+
+
+</ul>
+
+</body>
+</html>
